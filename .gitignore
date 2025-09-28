@@ -1,9 +1,57 @@
-# Virtual Environment
-venv/
+.gitignore for the SpeakEase Project
+======================================================
+Python Defaults (from GitHub's template)
+======================================================
+pycache/
+*.py[cod]
+*$py.class
 
-# Fine-tuned Model (DO NOT COMMIT)
+C extensions
+*.so
+
+Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+Virtual Environment
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+======================================================
+SpeakEase Project Specifics
+======================================================
+This is the most important one: ignore your large, fine-tuned model
 final-svarah-whisper-model/
 
-# Python cache
-__pycache__/
-*.pyc
+Ignore any temporary audio files your app creates
+temp_.mp3
+temp_.wav
+
+Ignore log files
+*.log
+
+VS Code specific files
+.vscode/
+
+A good practice for storing any future secrets
+.env
