@@ -42,6 +42,8 @@ SpeakEase Project Specifics
 ======================================================
 This is the most important one: ignore your large, fine-tuned model
 final-svarah-whisper-model/
+SpeakEase_Age_Checker_Model/
+SpeakEase_MultiScore_Model/
 
 Ignore any temporary audio files your app creates
 temp_.mp3
