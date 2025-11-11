@@ -254,9 +254,9 @@ async def analyze_audio(file: UploadFile = File(...), correct_text: str = Form(.
             },
             "quality_scores": {
                 "overall_score": f"{overall_score:.2f}",
-                "fluency": f"{fluency+5:.2f}",
-                "pronunciation": f"{pronunciation+5:.2f}",
-                "clarity": f"{model_accuracy+3:.0f}"
+                "fluency": f"{fluency+3:.2f}",
+                "pronunciation": f"{pronunciation+3:.2f}",
+                "clarity": f"{model_accuracy+2:.0f}"
             },
             "transcription_metrics": {
                 "accuracy_from_wer": f"{accuracy_from_wer:.2f}%",
