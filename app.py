@@ -37,7 +37,7 @@ transcription_pipe = pipeline(
     model=transcription_model_path,
     device=device,
 )
-print("   ✅ Transcription Model ready.")
+print("   ✅ Transcription Model is ready.")
 
 # --- Specialist 2: The Quality Analyst (Multi-Score Model) ---
 print("   - Loading Multi-Score Model (Wav2Vec2)...")
@@ -47,7 +47,7 @@ scoring_model = AutoModelForAudioClassification.from_pretrained(scoring_model_pa
 scoring_model.to(device)
 with open(f"{scoring_model_path}/norm_params.json", 'r') as f:
     norm_params = json.load(f)
-print("   ✅ Multi-Score Model ready.")
+print("   ✅ Multi-Score Model is ready.")
 
 # --- Specialist 3: The Age Detector (Child vs. Adult Classifier) ---
 print("   - Loading Age Classifier Model (Wav2Vec2)...")
@@ -57,7 +57,7 @@ age_pipe = pipeline(
     model=age_model_path,
     device=device,
 )
-print("   ✅ Age Classifier Model ready.")
+print("   ✅ Age Classifier Model is ready.")
 print("\n🎉 All models loaded. SpeakEase server is running!")
 
 # --- 3. HELPER & ANALYSIS FUNCTIONS ---
