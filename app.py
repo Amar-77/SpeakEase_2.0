@@ -30,7 +30,7 @@ print(f"🚀 SpeakEase Server starting up... Using device: {device}")
 # --- 2. LOAD ALL THREE SPECIALIZED MODELS AT STARTUP (PATHS ASSUMED TO BE CORRECT) ---
 
 # --- Specialist 1: The Scribe (Transcription Model) ---
-print("   - Loading Transcription Model (Whisper)...")
+print("   - Loading The Transcription Model (Whisper)...")
 transcription_model_path = "./final-svarah-whisper-model"
 transcription_pipe = pipeline(
     "automatic-speech-recognition",
@@ -40,7 +40,7 @@ transcription_pipe = pipeline(
 print("   ✅ Transcription Model is ready.")
 
 # --- Specialist 2: The Quality Analyst (Multi-Score Model) ---
-print("   - Loading Multi-Score Model (Wav2Vec2)...")
+print("   - Loading The Multi-Score Model (Wav2Vec2)...")
 scoring_model_path = "./SpeakEase_MultiScore_Model"
 scoring_feature_extractor = AutoFeatureExtractor.from_pretrained(scoring_model_path)
 scoring_model = AutoModelForAudioClassification.from_pretrained(scoring_model_path)
@@ -50,7 +50,7 @@ with open(f"{scoring_model_path}/norm_params.json", 'r') as f:
 print("   ✅ Multi-Score Model is ready.")
 
 # --- Specialist 3: The Age Detector (Child vs. Adult Classifier) ---
-print("   - Loading Age Classifier Model (Wav2Vec2)...")
+print("   - Loading The Age Classifier Model (Wav2Vec2)...")
 age_model_path = "./SpeakEase_Age_Checker_Model"
 age_pipe = pipeline(
     "audio-classification",
